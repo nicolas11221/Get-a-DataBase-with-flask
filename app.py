@@ -1,10 +1,11 @@
 
 from flask import Flask, render_template, request, url_for, redirect, flash, jsonify
-
+from flask_sslify import SSLify
 #Importamos La Base De Datos
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
+sslify = SSLify(app)
 
 #MySql Connection
 #Importamos La Configuracion De MySql
